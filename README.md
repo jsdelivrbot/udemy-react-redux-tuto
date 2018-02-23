@@ -48,5 +48,24 @@ with traefik, check project on [http://web.udemyreactredux.docker.localhost/](ht
 
 without traefik, find ip of the container with docker inspect and go to http://ip:8080
 
+Search in youtube API
+---------------------
+
+### Youtube API key
+
+On youtube, get a key for the "Youtube Data API v3"
+
+https://console.developers.google.com
+
+ask for a browser key and for public data.
+
+YOUTUBE_API_KEY = see SECRET.md file
+
+### install youtube sdk
+
+```bash
+# add the youtube-api-search in our project
+npm install --save youtube-api-search
+```
 
 
