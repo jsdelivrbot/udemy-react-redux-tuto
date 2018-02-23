@@ -1,12 +1,26 @@
 import React, {Component} from 'react'
 
 class SearchBar extends Component {
-    render() {
-        return <input onChange={this.onInputChange} onFocus={(event) => console.log(event)}/>;
+    constructor(props) {
+        super(props);
+        this.state = {term: ''};
     }
 
-    onInputChange(event) {
-        console.log('input changed'+event.target.value);
+    render() {
+        return (
+            <div>
+                <input
+                    onChange={(event) => this.setState({ term: event.target.value })}
+                    onFocus={this.onFocusChange}
+                />
+                <br/>
+                value of the input : {this.state.term}
+            </div>
+        );
+    }
+
+    onFocusChange(event) {
+        console.log('focus on');
     }
 }
 
