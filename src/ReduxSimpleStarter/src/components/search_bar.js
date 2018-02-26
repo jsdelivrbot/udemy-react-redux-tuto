@@ -8,10 +8,10 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div>
+            <div className="search-bar">
                 <input
                     value={this.state.term}
-                    onChange={(event) => this.setState({ term: event.target.value })}
+                    onChange={(event) => this.onInputChange(event.target.value)}
                     onFocus={this.onFocusChange}
                 />
                 <br/>
@@ -20,6 +20,10 @@ class SearchBar extends Component {
         );
     }
 
+    onInputChange(term) {
+        this.setState({term});
+        this.props.onSearchTermChange(term);
+    }
     onFocusChange(event) {
         console.log('focus on');
     }
