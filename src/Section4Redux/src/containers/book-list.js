@@ -12,7 +12,7 @@ class BookList extends Component {
                     className="list-group-item"
                     onClick={() => this.props.selectBook(book)}
                 >
-                    {book.title}
+                    {book.title} ({book.pages})
                 </li>
             );
         });
