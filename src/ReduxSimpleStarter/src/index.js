@@ -4,11 +4,14 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 
+import ParameterBag from './parameter-bag';
+
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 
-const API_KEY = 'AIzaSyCXH3HFy7bufyh6eFL2r7qnXJ3zbdtuQd8';
+
+const API_KEY = (new ParameterBag()).getParameter('YOUTUBE_API_KEY');
 
 // create a new component. This component should produce some html
 class App extends Component
