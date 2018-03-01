@@ -7,7 +7,7 @@ class WeatherList extends Component {
     renderCityList() {
         return this.props.weather.map( (cityWeather) => {
             return (
-                <tr>
+                <tr key={cityWeather.city.id + cityWeather.city.name}>
                     <td>{cityWeather.city.name}</td>
                     <td>{cityWeather.city.coord.lat}</td>
                     <td>{cityWeather.city.coord.lon}</td>
