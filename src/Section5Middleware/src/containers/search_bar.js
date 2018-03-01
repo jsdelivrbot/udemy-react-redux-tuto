@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ParameterBag from '../parameter-bag';
 
 export default class SearchBar extends Component
 {
@@ -7,6 +8,9 @@ export default class SearchBar extends Component
         super(props);
         this.state = {term: ''};
         this.onInputChange = this.onInputChange.bind(this);
+
+        const API_KEY = (new ParameterBag()).getParameter('OPEN_WEATHER_MAP_API_KEY');
+        console.log(API_KEY);
     }
     onInputChange(event) {
         this.setState({term: event.target.value});

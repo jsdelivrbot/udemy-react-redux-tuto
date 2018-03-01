@@ -2,7 +2,7 @@
 bundle.js
 npm-debug.log
 .DS_Store
-
+src/parameter-bag.js
 # IntelliJ
 *.iml
 /.idea
