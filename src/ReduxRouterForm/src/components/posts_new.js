@@ -25,14 +25,21 @@ class PostsNew extends Component {
                     component={this.renderField}
                 />
                 <Field
-                    label="Tags"
-                    name="tags"
+                    label="Categories"
+                    name="categories"
+                    component={this.renderField}
+                />
+                <Field
+                    label="Content"
+                    name="content"
                     component={this.renderField}
                 />
             </form>
         );
     }
 }
+
+
 
 export default reduxForm({
     form: 'PostsNewForm'
