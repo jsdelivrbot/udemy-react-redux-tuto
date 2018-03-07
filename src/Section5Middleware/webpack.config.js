@@ -24,5 +24,6 @@ module.exports = {
     contentBase: './',
     host: "0.0.0.0",
     disableHostCheck: true
-  }
+  },
+  devtool: 'source-map'
 };
