@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchPosts } from "../actions";
+import Modal from './modal';
 import _ from 'lodash';
 
 class PostsIndex extends Component {
@@ -32,6 +33,10 @@ class PostsIndex extends Component {
                 <ul className="list-group">
                     {this.renderPosts()}
                 </ul>
+                <Modal>
+                    <h1>Modal title</h1>
+                    <p>Super contenu</p>
+                </Modal>
             </div>
         );
     }
