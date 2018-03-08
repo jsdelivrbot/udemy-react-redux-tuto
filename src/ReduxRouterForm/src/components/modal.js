@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { store } from '../index';
+import { Provider } from 'react-redux';
 
 
 class Modal extends Component {
@@ -22,7 +24,7 @@ class Modal extends Component {
 
     _render() {
         ReactDOM.render(
-            <div>{this.props.children}</div>,
+            <Provider store={store}><div className="modal-content">{this.props.children}</div></Provider>,
             this.modalTarget
         );
     }

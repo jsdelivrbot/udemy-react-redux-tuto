@@ -4,6 +4,17 @@ form a {
 
 body .modal {
     position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(64, 64, 64, .8);;
+    padding: 40px;
+    display: block;
+}
+
+body .modal .modal-content {
+    position: fixed;
     top: 40px;
     left: 40px;
     right: 40px;
